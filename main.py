@@ -1,10 +1,5 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         string_int = str(x)
-        compare_str = ""
-        for digit in string_int:
-            compare_str = digit + compare_str
-        if compare_str == string_int:
-            return True
-        else:
-            return False
+        reversed_str = string_int[::-1]  # Reverse the string using slicing
+        return string_int == reversed_str
